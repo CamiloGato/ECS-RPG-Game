@@ -33,8 +33,8 @@ namespace Systems
     public partial struct SquareMovementJob : IJobEntity
     {
         public float DeltaTime;
-        
-        public void Execute(ref LocalTransform transform, in SquareVelocity velocity)
+
+        private void Execute(ref LocalTransform transform, in SquareVelocity velocity)
         {
             transform.Position += velocity.Direction * DeltaTime;
         }
