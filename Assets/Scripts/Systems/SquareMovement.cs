@@ -36,7 +36,7 @@ namespace Systems
 
         private void Execute(ref LocalTransform transform, in SquareVelocity velocity)
         {
-            transform.Position += velocity.Direction * DeltaTime;
+            transform.Position += velocity.Direction * velocity.Speed * DeltaTime;
         }
     } 
     

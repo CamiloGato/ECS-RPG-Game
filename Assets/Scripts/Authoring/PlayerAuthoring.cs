@@ -15,6 +15,7 @@ namespace Authoring
             {
                 Entity entity = GetEntity(TransformUsageFlags.Dynamic);
                 AddComponent(entity, new Player());
+                AddComponent(entity, new PlayerInput());
                 AddComponent(entity, new SquareVelocity()
                 {
                     Direction = authoring.direction,
